@@ -1,0 +1,646 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Enlaces Inalámbricos | Informe Final</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #07111f;
+            color: #eaf6ff;
+            line-height: 1.7;
+        }
+
+        /* BARRA DE NAVEGACIÓN */
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(4, 15, 28, 0.95);
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid #123b5c;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #35c8ff;
+        }
+
+        .logo span {
+            color: white;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #d7eaff;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #35c8ff;
+        }
+
+        /* PORTADA */
+
+        .inicio {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 120px 20px 70px;
+            background:
+                radial-gradient(circle at center, #103b5c 0%, #07111f 55%, #030812 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .inicio::before {
+            content: "〰 〰 〰 〰 〰";
+            position: absolute;
+            font-size: 100px;
+            color: rgba(53, 200, 255, 0.05);
+            transform: rotate(-15deg);
+        }
+
+        .contenido-inicio {
+            max-width: 900px;
+            z-index: 2;
+        }
+
+        .icono {
+            font-size: 75px;
+            margin-bottom: 20px;
+        }
+
+        .inicio h1 {
+            font-size: 58px;
+            color: white;
+            margin-bottom: 15px;
+            text-shadow: 0 0 25px rgba(53, 200, 255, 0.5);
+        }
+
+        .inicio h1 span {
+            color: #35c8ff;
+        }
+
+        .inicio p {
+            font-size: 21px;
+            color: #b9d9ea;
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .autor {
+            margin-top: 35px;
+            padding: 14px 25px;
+            display: inline-block;
+            border: 1px solid #2478a8;
+            border-radius: 30px;
+            background: rgba(20, 70, 100, 0.25);
+            color: #8bdfff;
+        }
+
+        /* SECCIONES */
+
+        section {
+            padding: 90px 8%;
+            max-width: 1250px;
+            margin: auto;
+        }
+
+        .titulo {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .titulo h2 {
+            font-size: 38px;
+            color: #35c8ff;
+            margin-bottom: 10px;
+        }
+
+        .titulo p {
+            color: #a9bdcc;
+        }
+
+        /* TARJETAS */
+
+        .tarjetas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .tarjeta {
+            background: linear-gradient(145deg, #0c2135, #081522);
+            border: 1px solid #164767;
+            padding: 30px;
+            border-radius: 18px;
+            transition: 0.3s;
+        }
+
+        .tarjeta:hover {
+            transform: translateY(-8px);
+            border-color: #35c8ff;
+            box-shadow: 0 10px 30px rgba(53, 200, 255, 0.15);
+        }
+
+        .tarjeta .numero {
+            font-size: 35px;
+            color: #35c8ff;
+            margin-bottom: 10px;
+        }
+
+        .tarjeta h3 {
+            color: white;
+            margin-bottom: 12px;
+            font-size: 21px;
+        }
+
+        .tarjeta p {
+            color: #aec4d2;
+        }
+
+        /* INFORMACIÓN */
+
+        .contenido {
+            background: #091a2b;
+            border-left: 4px solid #35c8ff;
+            padding: 35px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+
+        .contenido h3 {
+            color: #35c8ff;
+            margin-bottom: 15px;
+            font-size: 25px;
+        }
+
+        .contenido p {
+            color: #c2d5df;
+        }
+
+        /* LISTAS */
+
+        .lista {
+            margin-top: 20px;
+            padding-left: 20px;
+        }
+
+        .lista li {
+            margin-bottom: 12px;
+            color: #c8dce7;
+        }
+
+        .lista li::marker {
+            color: #35c8ff;
+        }
+
+        /* COMPARACIÓN */
+
+        .comparacion {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .positivo,
+        .negativo {
+            padding: 30px;
+            border-radius: 18px;
+            background: #091a2b;
+        }
+
+        .positivo {
+            border-top: 4px solid #25d98b;
+        }
+
+        .negativo {
+            border-top: 4px solid #ff5c70;
+        }
+
+        .positivo h3 {
+            color: #25d98b;
+        }
+
+        .negativo h3 {
+            color: #ff5c70;
+        }
+
+        /* CONCLUSIÓN */
+
+        .conclusion {
+            text-align: center;
+            background: linear-gradient(135deg, #0b304a, #081522);
+            border: 1px solid #1c658e;
+            border-radius: 20px;
+            padding: 50px;
+        }
+
+        .conclusion p {
+            max-width: 900px;
+            margin: auto;
+            color: #c5dae5;
+            font-size: 18px;
+        }
+
+        /* PIE */
+
+        footer {
+            background: #030a12;
+            text-align: center;
+            padding: 35px 20px;
+            border-top: 1px solid #123b5c;
+        }
+
+        footer h3 {
+            color: #35c8ff;
+            margin-bottom: 8px;
+        }
+
+        footer p {
+            color: #7892a3;
+            font-size: 14px;
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .inicio h1 {
+                font-size: 40px;
+            }
+
+            .inicio p {
+                font-size: 17px;
+            }
+
+            .comparacion {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENÚ -->
+
+    <nav>
+        <div class="logo">WIFI<span>LINK</span></div>
+
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#concepto">Concepto</a></li>
+            <li><a href="#tipos">Tipos</a></li>
+            <li><a href="#ventajas">Ventajas</a></li>
+            <li><a href="#funcionamiento">Funcionamiento</a></li>
+            <li><a href="#conclusion">Conclusión</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- PORTADA -->
+
+    <header class="inicio" id="inicio">
+
+        <div class="contenido-inicio">
+
+            <div class="icono">📡</div>
+
+            <h1>ENLACES <span>INALÁMBRICOS</span></h1>
+
+            <p>
+                Informe final sobre la comunicación y transmisión
+                de información mediante tecnologías inalámbricas.
+            </p>
+
+            <div class="autor">
+                Elaborado por: <strong>Ever José Xiloj Rivas</strong>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- CONCEPTO -->
+
+    <section id="concepto">
+
+        <div class="titulo">
+            <h2>¿Qué son los enlaces inalámbricos?</h2>
+            <p>Conociendo la tecnología que permite comunicarnos sin cables.</p>
+        </div>
+
+        <div class="contenido">
+
+            <p>
+                Los enlaces inalámbricos son sistemas de comunicación que
+                permiten transmitir información entre diferentes dispositivos
+                sin utilizar cables físicos. Para realizar esta comunicación
+                se utilizan ondas electromagnéticas que viajan por el espacio
+                y permiten enviar datos, voz, imágenes y diferentes tipos de
+                información.
+            </p>
+
+            <br>
+
+            <p>
+                Actualmente esta tecnología forma parte de nuestra vida diaria,
+                ya que está presente en redes Wi-Fi, teléfonos celulares,
+                Bluetooth, sistemas de radio, televisión, satélites y muchas
+                otras tecnologías utilizadas para mantener conectados a
+                dispositivos y personas.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- TIPOS -->
+
+    <section id="tipos">
+
+        <div class="titulo">
+            <h2>Tipos de enlaces inalámbricos</h2>
+            <p>Algunas de las tecnologías inalámbricas más utilizadas.</p>
+        </div>
+
+        <div class="tarjetas">
+
+            <div class="tarjeta">
+                <div class="numero">01</div>
+                <h3>Wi-Fi</h3>
+                <p>
+                    Permite conectar dispositivos a una red utilizando ondas
+                    de radio. Es utilizado principalmente para acceder a
+                    Internet y compartir recursos.
+                </p>
+            </div>
+
+            <div class="tarjeta">
+                <div class="numero">02</div>
+                <h3>Bluetooth</h3>
+                <p>
+                    Tecnología diseñada para conectar dispositivos cercanos,
+                    como teléfonos, audífonos, teclados, bocinas y otros
+                    dispositivos electrónicos.
+                </p>
+            </div>
+
+            <div class="tarjeta">
+                <div class="numero">03</div>
+                <h3>Microondas</h3>
+                <p>
+                    Utiliza ondas de radio de alta frecuencia para transmitir
+                    información a largas distancias, especialmente en sistemas
+                    de telecomunicaciones.
+                </p>
+            </div>
+
+            <div class="tarjeta">
+                <div class="numero">04</div>
+                <h3>Satélite</h3>
+                <p>
+                    Permite establecer comunicaciones a grandes distancias
+                    mediante satélites que reciben y transmiten señales.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FUNCIONAMIENTO -->
+
+    <section id="funcionamiento">
+
+        <div class="titulo">
+            <h2>¿Cómo funcionan?</h2>
+            <p>Proceso básico de una comunicación inalámbrica.</p>
+        </div>
+
+        <div class="contenido">
+
+            <h3>📡 1. Emisión de la señal</h3>
+
+            <p>
+                Un dispositivo transmisor genera información y la convierte
+                en una señal que puede viajar mediante ondas
+                electromagnéticas.
+            </p>
+
+        </div>
+
+        <div class="contenido">
+
+            <h3>〰️ 2. Transmisión</h3>
+
+            <p>
+                La señal viaja por el espacio desde el dispositivo transmisor
+                hasta el receptor. Dependiendo de la tecnología utilizada,
+                puede recorrer distancias cortas o muy grandes.
+            </p>
+
+        </div>
+
+        <div class="contenido">
+
+            <h3>💻 3. Recepción</h3>
+
+            <p>
+                El dispositivo receptor capta la señal inalámbrica y procesa
+                la información recibida para convertirla nuevamente en datos
+                que puedan ser utilizados.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- VENTAJAS -->
+
+    <section id="ventajas">
+
+        <div class="titulo">
+            <h2>Ventajas y desventajas</h2>
+            <p>Aspectos positivos y limitaciones de esta tecnología.</p>
+        </div>
+
+        <div class="comparacion">
+
+            <div class="positivo">
+
+                <h3>✓ Ventajas</h3>
+
+                <ul class="lista">
+
+                    <li>Permiten movilidad y libertad de movimiento.</li>
+
+                    <li>Reducen la necesidad de utilizar cables.</li>
+
+                    <li>Facilitan la conexión de diferentes dispositivos.</li>
+
+                    <li>Pueden instalarse rápidamente.</li>
+
+                    <li>Son utilizadas en hogares, empresas y escuelas.</li>
+
+                    <li>Permiten compartir información de manera rápida.</li>
+
+                </ul>
+
+            </div>
+
+
+            <div class="negativo">
+
+                <h3>✕ Desventajas</h3>
+
+                <ul class="lista">
+
+                    <li>La señal puede verse afectada por obstáculos.</li>
+
+                    <li>Puede existir interferencia de otras señales.</li>
+
+                    <li>Las redes inalámbricas deben protegerse correctamente.</li>
+
+                    <li>La velocidad puede disminuir dependiendo de la distancia.</li>
+
+                    <li>Algunas tecnologías tienen un alcance limitado.</li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- IMPORTANCIA -->
+
+    <section>
+
+        <div class="titulo">
+
+            <h2>Importancia de los enlaces inalámbricos</h2>
+
+        </div>
+
+        <div class="contenido">
+
+            <p>
+                Los enlaces inalámbricos son importantes porque han facilitado
+                la comunicación y el acceso a la información. Gracias a ellos
+                es posible conectarse a Internet, comunicarse mediante
+                dispositivos móviles, utilizar sistemas de navegación,
+                compartir archivos y conectar diferentes equipos sin necesidad
+                de utilizar conexiones físicas.
+            </p>
+
+            <br>
+
+            <p>
+                Además, estas tecnologías continúan evolucionando y permiten
+                desarrollar nuevas formas de comunicación que son cada vez más
+                rápidas, eficientes y accesibles.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONCLUSIÓN -->
+
+    <section id="conclusion">
+
+        <div class="titulo">
+            <h2>Conclusión</h2>
+        </div>
+
+        <div class="conclusion">
+
+            <p>
+                En conclusión, los enlaces inalámbricos son una parte
+                fundamental de la tecnología actual, ya que permiten conectar
+                dispositivos y transmitir información sin necesidad de utilizar
+                cables. Durante el desarrollo de este tema pude conocer mejor
+                cómo funcionan estas conexiones, los diferentes tipos que
+                existen y la importancia que tienen en nuestra vida diaria.
+                También comprendí que, aunque presentan algunas limitaciones,
+                sus ventajas han permitido mejorar considerablemente la forma
+                en que nos comunicamos y compartimos información.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer>
+
+        <h3>INFORME FINAL — ENLACES INALÁMBRICOS</h3>
+
+        <p>
+            Elaborado por Ever José Xiloj Rivas
+        </p>
+
+        <p>
+            Bachillerato en Computación
+        </p>
+
+        <br>
+
+        <p>
+            © 2026 — Proyecto académico
+        </p>
+
+    </footer>
+
+</body>
+</html>
+```
