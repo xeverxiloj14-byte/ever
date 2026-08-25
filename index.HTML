@@ -14,271 +14,157 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #546b86;
-            color: #fb0707;
+
+            /* COLOR PRINCIPAL */
+            background: #95b7e2;
+
+            color: #333;
             line-height: 1.7;
         }
 
-    
         header {
-            min-height: 330px;
+            min-height: 300px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 50px 20px;
+            padding: 40px 20px;
 
-            background:
-                radial-gradient(circle at top left, #cce9ff, transparent 40%),
-                radial-gradient(circle at bottom right, #e5f4ff, transparent 40%),
-                linear-gradient(135deg, #ffffff, #e8f5ff);
-
-            border-bottom: 2px solid #2196f3;
-
-            box-shadow:
-                0 0 20px rgba(33, 150, 243, 0.14);
+            background: rgb(17, 42, 69);
         }
 
         header h1 {
-            font-size: 50px;
+            font-size: 45px;
             margin: 0 0 10px;
-            color: #1f2937;
 
-            text-shadow:
-                0 0 10px #64b5f6,
-                0 0 25px #64b5f6,
-                0 0 45px #90caf9;
+            /* COLOR DEL TITULO */
+            color: #548798;
         }
 
         header p {
             font-size: 20px;
-            color: #374151;
+            color: #fcfafa;
             margin: 0;
         }
 
-     
         nav {
-            background: rgba(255, 255, 255, 0.97);
+            background: rgb(249, 248, 248);
             text-align: center;
-            padding: 18px 10px;
+            padding: 15px 10px;
+
             position: sticky;
             top: 0;
             z-index: 1000;
 
-            border-bottom: 1px solid #90caf9;
-
-            box-shadow:
-                0 0 20px rgba(33, 150, 243, 0.14);
+            border-bottom: 1px solid #90b8f9;
         }
 
         nav a {
             display: inline-block;
-            color: #374151;
+
+            color: #333;
             text-decoration: none;
+
             margin: 5px 8px;
-            padding: 9px 15px;
-            border: 1px solid transparent;
-            border-radius: 20px;
+            padding: 8px 12px;
+
             font-weight: bold;
-            transition: 0.3s;
         }
 
         nav a:hover {
-            color: white;
-            border-color: #64b5f6;
-            background: #2196f3;
-
-            box-shadow:
-                0 0 12px #64b5f6,
-                0 0 20px rgba(33, 150, 243, 0.25);
-
-            transform: translateY(-2px);
+            color: #1976d2;
         }
 
-      
         section {
             width: 88%;
             max-width: 1050px;
-            margin: 35px auto;
-            padding: 32px;
 
-            background: linear-gradient(
-                145deg,
-                rgba(255, 255, 255, 0.98),
-                rgba(248, 250, 252, 0.98)
-            );
+            margin: 30px auto;
+            padding: 30px;
+
+            background: white;
 
             border: 1px solid #b3ddff;
-            border-radius: 18px;
-
-            box-shadow:
-                0 0 15px rgba(34, 60, 82, 0.08),
-                inset 0 0 20px rgba(33, 150, 243, 0.04);
-
-            transition: 0.3s;
-        }
-
-        section:hover {
-            border-color: #64b5f6;
-
-            box-shadow:
-                0 0 25px rgba(33, 150, 243, 0.20),
-                0 0 45px rgba(33, 150, 243, 0.08),
-                inset 0 0 20px rgba(33, 150, 243, 0.06);
+            border-radius: 10px;
         }
 
         h2 {
+            /* COLOR DE LOS TITULOS */
             color: #1976d2;
+
+            /* TAMAÑO DE LOS TITULOS */
             font-size: 28px;
 
-            border-bottom: 2px solid #2196f3;
-
-            padding-bottom: 10px;
-
-            text-shadow:
-                0 0 8px rgba(33, 150, 243, 0.3);
+            margin-top: 0;
         }
 
         h3 {
             color: #2196f3;
             font-size: 21px;
-
-            text-shadow:
-                0 0 6px rgba(33, 150, 243, 0.2);
         }
 
         p {
-            color: #4b5563;
+            color: #444;
         }
 
         .destacado {
-            background: linear-gradient(
-                90deg,
-                #3f87bb,
-                #5fa9eb
-            );
+            background: #e3f2fd;
 
-            border-left: 4px solid #000000;
+            border-left: 4px solid #2196f3;
 
-            padding: 20px;
-            margin: 22px 0;
+            padding: 18px;
+            margin: 20px 0;
 
-            border-radius: 8px;
-
-            box-shadow:
-                0 0 15px rgba(5, 255, 255, 0.14);
+            border-radius: 5px;
         }
 
-      
         ul {
             padding-left: 25px;
         }
 
         li {
-            margin-bottom: 12px;
-            color: #000000;
+            margin-bottom: 10px;
+            color: #333;
         }
 
         li::marker {
             color: #2196f3;
         }
 
-      
-        .tarjetas {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+        /* ELEMENTOS SIN TARJETAS */
+
+        .elemento {
+            margin-bottom: 25px;
         }
 
-        .tarjeta {
-            flex: 1;
-            min-width: 250px;
-            padding: 22px;
-
-            background: linear-gradient(
-                145deg,
-                #fdffff,
-                #ffffff
-            );
-
-            border: 1px solid #90caf9;
-            border-radius: 15px;
-
-            transition: 0.3s;
-
-            box-shadow:
-                0 0 12px rgba(33, 124, 243, 0.12);
+        .elemento h3 {
+            margin-bottom: 5px;
         }
 
-        .tarjeta:hover {
-            transform: translateY(-7px);
+        /* TIPOS SIN TARJETAS */
 
-            border-color: #2196f3;
-
-            box-shadow:
-                0 0 15px #64b5f6,
-                0 0 30px rgba(36, 175, 255, 0.199),
-                0 0 50px rgba(36, 125, 228, 0.158);
+        .tipo {
+            margin-bottom: 25px;
         }
 
-        .tarjeta h3 {
-            margin-top: 0;
-            color: #1976d2;
-
-            text-shadow:
-                0 0 8px rgba(33, 150, 243, 0.25);
+        .tipo h3 {
+            margin-bottom: 5px;
         }
 
-        .boton {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 12px 22px;
+        /* VENTAJAS Y DESVENTAJAS */
 
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-
-            border-radius: 25px;
-
-            background: linear-gradient(
-                90deg,
-                #f8f9fa,
-                #fafafa
-            );
-
-            box-shadow:
-                0 0 15px rgba(33, 150, 243, 0.25);
-
-            transition: 0.3s;
+        .ventaja {
+            margin-bottom: 25px;
         }
 
-        .boton:hover {
-            transform: scale(1.05);
-
-            box-shadow:
-                0 0 20px #648bf6,
-                0 0 35px #7197ff,
-                0 0 50px rgba(33, 82, 243, 0.25);
-        }
-
-       
         footer {
-            margin-top: 50px;
-            padding: 35px 20px;
+            margin-top: 40px;
+            padding: 30px 20px;
+
             text-align: center;
 
-            background:
-                linear-gradient(
-                    135deg,
-                    #1565c0,
-                    #2196f3
-                );
-
-            border-top: 2px solid #64b5f6;
-
-            box-shadow:
-                0 -5px 25px rgba(33, 150, 243, 0.14);
+            background: #1976d2;
         }
 
         footer p {
@@ -289,12 +175,8 @@
         footer strong {
             color: white;
             font-size: 20px;
-
-            text-shadow:
-                0 0 10px #90caf9;
         }
 
-       
         @media (max-width: 700px) {
 
             header h1 {
@@ -310,14 +192,9 @@
                 padding: 22px;
             }
 
-
             nav a {
                 font-size: 14px;
-                padding: 7px 10px;
-            }
-
-            .tarjeta {
-                min-width: 100%;
+                padding: 7px 8px;
             }
         }
     </style>
@@ -326,11 +203,18 @@
 <body>
 
 <header>
+
     <h1>ENLACES INALÁMBRICOS</h1>
-    <p>Comunicación y transmisión de datos sin utilizar cables</p>
+
+    <p>
+        Comunicación y transmisión de datos sin utilizar cables
+    </p>
+
 </header>
 
+
 <nav>
+
     <a href="#introduccion">Introducción</a>
     <a href="#funcionamiento">Funcionamiento</a>
     <a href="#elementos">Elementos</a>
@@ -339,7 +223,9 @@
     <a href="#ventajas">Ventajas</a>
     <a href="#aplicaciones">Aplicaciones</a>
     <a href="#seguridad">Seguridad</a>
+
 </nav>
+
 
 <section id="introduccion">
 
@@ -362,13 +248,17 @@
     </p>
 
     <div class="destacado">
+
         <strong>💡 Idea principal:</strong>
+
         Un enlace inalámbrico permite que la información viaje de un punto
         a otro a través del aire, sin necesidad de utilizar un cable físico
         como medio de transmisión.
+
     </div>
 
 </section>
+
 
 <section id="funcionamiento">
 
@@ -397,112 +287,147 @@
 
 </section>
 
+
 <section id="elementos">
 
     <h2>📡 Elementos de un enlace inalámbrico</h2>
 
-    <div class="tarjetas">
 
-        <div class="tarjeta">
-            <h3>📤 Transmisor</h3>
-            <p>
-                Es el dispositivo que envía la información mediante una
-                señal inalámbrica.
-            </p>
-        </div>
+    <div class="elemento">
 
-        <div class="tarjeta">
-            <h3>📥 Receptor</h3>
-            <p>
-                Es el dispositivo encargado de recibir la señal y convertirla
-                nuevamente en información.
-            </p>
-        </div>
+        <h3>📤 Transmisor</h3>
 
-        <div class="tarjeta">
-            <h3>📶 Antena</h3>
-            <p>
-                Permite transmitir y recibir ondas electromagnéticas.
-                Dependiendo del tipo de enlace puede tener diferentes formas
-                y características.
-            </p>
-        </div>
+        <p>
+            Es el dispositivo que envía la información mediante una
+            señal inalámbrica.
+        </p>
 
-        <div class="tarjeta">
-            <h3>🌐 Medio de propagación</h3>
-            <p>
-                Es el espacio por donde viajan las ondas electromagnéticas
-                entre el transmisor y el receptor.
-            </p>
-        </div>
+    </div>
+
+
+    <div class="elemento">
+
+        <h3>📥 Receptor</h3>
+
+        <p>
+            Es el dispositivo encargado de recibir la señal y convertirla
+            nuevamente en información.
+        </p>
+
+    </div>
+
+
+    <div class="elemento">
+
+        <h3>📶 Antena</h3>
+
+        <p>
+            Permite transmitir y recibir ondas electromagnéticas.
+            Dependiendo del tipo de enlace puede tener diferentes formas
+            y características.
+        </p>
+
+    </div>
+
+
+    <div class="elemento">
+
+        <h3>🌐 Medio de propagación</h3>
+
+        <p>
+            Es el espacio por donde viajan las ondas electromagnéticas
+            entre el transmisor y el receptor.
+        </p>
 
     </div>
 
 </section>
+
 
 <section id="tipos">
 
     <h2>📶 Tipos de enlaces inalámbricos</h2>
 
-    <div class="tarjetas">
 
-        <div class="tarjeta">
-            <h3>📻 Radio</h3>
-            <p>
-                Utiliza ondas de radio para transmitir información. Es
-                ampliamente utilizado en comunicaciones de voz, datos y
-                televisión.
-            </p>
-        </div>
+    <div class="tipo">
 
-        <div class="tarjeta">
-            <h3>📡 Wi-Fi</h3>
-            <p>
-                Es una de las tecnologías inalámbricas más utilizadas.
-                Permite conectar computadoras, teléfonos, televisores y otros
-                dispositivos a una red local y, generalmente, a Internet.
-            </p>
-        </div>
+        <h3>📻 Radio</h3>
 
-        <div class="tarjeta">
-            <h3>🔵 Bluetooth</h3>
-            <p>
-                Es una tecnología diseñada para comunicaciones inalámbricas
-                de corto alcance. Se utiliza para conectar teléfonos con
-                audífonos, bocinas, teclados, mouse y otros dispositivos.
-            </p>
-        </div>
+        <p>
+            Utiliza ondas de radio para transmitir información. Es
+            ampliamente utilizado en comunicaciones de voz, datos y
+            televisión.
+        </p>
 
-        <div class="tarjeta">
-            <h3>📡 Microondas</h3>
-            <p>
-                Los enlaces de microondas permiten realizar comunicaciones
-                a distancias mayores mediante antenas. Son utilizados en
-                redes de telecomunicaciones y conexiones entre diferentes puntos.
-            </p>
-        </div>
+    </div>
 
-        <div class="tarjeta">
-            <h3>🔴 Infrarrojo</h3>
-            <p>
-                Utiliza radiación infrarroja para transmitir información.
-                Su utilización requiere normalmente una distancia corta y
-                puede verse afectada por obstáculos.
-            </p>
-        </div>
 
-        <div class="tarjeta">
-            <h3>📱 Redes móviles</h3>
-            <p>
-                Las redes celulares permiten que teléfonos y otros dispositivos
-                puedan comunicarse y acceder a Internet mediante estaciones
-                base distribuidas en diferentes zonas.
-            </p>
-        </div>
+    <div class="tipo">
+
+        <h3>📡 Wi-Fi</h3>
+
+        <p>
+            Es una de las tecnologías inalámbricas más utilizadas.
+            Permite conectar computadoras, teléfonos, televisores y otros
+            dispositivos a una red local y, generalmente, a Internet.
+        </p>
+
+    </div>
+
+
+    <div class="tipo">
+
+        <h3>🔵 Bluetooth</h3>
+
+        <p>
+            Es una tecnología diseñada para comunicaciones inalámbricas
+            de corto alcance. Se utiliza para conectar teléfonos con
+            audífonos, bocinas, teclados, mouse y otros dispositivos.
+        </p>
+
+    </div>
+
+
+    <div class="tipo">
+
+        <h3>📡 Microondas</h3>
+
+        <p>
+            Los enlaces de microondas permiten realizar comunicaciones
+            a distancias mayores mediante antenas. Son utilizados en
+            redes de telecomunicaciones y conexiones entre diferentes puntos.
+        </p>
+
+    </div>
+
+
+    <div class="tipo">
+
+        <h3>🔴 Infrarrojo</h3>
+
+        <p>
+            Utiliza radiación infrarroja para transmitir información.
+            Su utilización requiere normalmente una distancia corta y
+            puede verse afectada por obstáculos.
+        </p>
+
+    </div>
+
+
+    <div class="tipo">
+
+        <h3>📱 Redes móviles</h3>
+
+        <p>
+            Las redes celulares permiten que teléfonos y otros dispositivos
+            puedan comunicarse y acceder a Internet mediante estaciones
+            base distribuidas en diferentes zonas.
+        </p>
 
     </div>
 
 </section>
+
 
 <section id="factores">
 
@@ -515,59 +440,117 @@
     </p>
 
     <ul>
-        <li><strong>Distancia:</strong> mientras mayor sea la distancia, la señal puede debilitarse.</li>
 
-        <li><strong>Obstáculos:</strong> paredes, edificios, árboles y otros objetos pueden afectar la señal.</li>
+        <li>
+            <strong>Distancia:</strong>
+            mientras mayor sea la distancia, la señal puede debilitarse.
+        </li>
 
-        <li><strong>Interferencias:</strong> otros dispositivos y redes que utilizan frecuencias cercanas pueden provocar interferencias.</li>
+        <li>
+            <strong>Obstáculos:</strong>
+            paredes, edificios, árboles y otros objetos pueden afectar la señal.
+        </li>
 
-        <li><strong>Potencia:</strong> la potencia de transmisión influye en el alcance del enlace.</li>
+        <li>
+            <strong>Interferencias:</strong>
+            otros dispositivos y redes que utilizan frecuencias cercanas
+            pueden provocar interferencias.
+        </li>
 
-        <li><strong>Antenas:</strong> el tipo, orientación y ubicación de las antenas pueden mejorar o disminuir la calidad de la comunicación.</li>
+        <li>
+            <strong>Potencia:</strong>
+            la potencia de transmisión influye en el alcance del enlace.
+        </li>
 
-        <li><strong>Condiciones ambientales:</strong> en algunos enlaces de larga distancia, las condiciones atmosféricas pueden influir en la propagación de la señal.</li>
+        <li>
+            <strong>Antenas:</strong>
+            el tipo, orientación y ubicación de las antenas pueden mejorar
+            o disminuir la calidad de la comunicación.
+        </li>
+
+        <li>
+            <strong>Condiciones ambientales:</strong>
+            en algunos enlaces de larga distancia, las condiciones
+            atmosféricas pueden influir en la propagación de la señal.
+        </li>
+
     </ul>
 
 </section>
+
 
 <section id="ventajas">
 
     <h2>⚡ Ventajas y desventajas</h2>
 
-    <div class="tarjetas">
 
-        <div class="tarjeta">
+    <div class="ventaja">
 
-            <h3>✅ Ventajas</h3>
+        <h3>✅ Ventajas</h3>
 
-            <ul>
-                <li>Permiten transmitir información sin utilizar cables.</li>
-                <li>Facilitan la movilidad de los dispositivos.</li>
-                <li>Son útiles donde instalar cables resulta difícil.</li>
-                <li>Permiten conectar varios dispositivos a una misma red.</li>
-                <li>Su instalación puede ser más sencilla que el cableado físico.</li>
-                <li>Permiten crear conexiones temporales o permanentes.</li>
-            </ul>
+        <ul>
 
-        </div>
+            <li>
+                Permiten transmitir información sin utilizar cables.
+            </li>
 
-        <div class="tarjeta">
+            <li>
+                Facilitan la movilidad de los dispositivos.
+            </li>
 
-            <h3>⚠️ Desventajas</h3>
+            <li>
+                Son útiles donde instalar cables resulta difícil.
+            </li>
 
-            <ul>
-                <li>La señal puede disminuir con la distancia.</li>
-                <li>Puede existir interferencia de otras señales.</li>
-                <li>Los obstáculos pueden afectar la comunicación.</li>
-                <li>Una red inalámbrica mal protegida puede presentar riesgos de seguridad.</li>
-                <li>La velocidad y estabilidad pueden variar dependiendo del entorno.</li>
-            </ul>
+            <li>
+                Permiten conectar varios dispositivos a una misma red.
+            </li>
 
-        </div>
+            <li>
+                Su instalación puede ser más sencilla que el cableado físico.
+            </li>
+
+            <li>
+                Permiten crear conexiones temporales o permanentes.
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <div class="ventaja">
+
+        <h3>⚠️ Desventajas</h3>
+
+        <ul>
+
+            <li>
+                La señal puede disminuir con la distancia.
+            </li>
+
+            <li>
+                Puede existir interferencia de otras señales.
+            </li>
+
+            <li>
+                Los obstáculos pueden afectar la comunicación.
+            </li>
+
+            <li>
+                Una red inalámbrica mal protegida puede presentar riesgos de seguridad.
+            </li>
+
+            <li>
+                La velocidad y estabilidad pueden variar dependiendo del entorno.
+            </li>
+
+        </ul>
 
     </div>
 
 </section>
+
 
 <section id="aplicaciones">
 
@@ -579,16 +562,39 @@
     </p>
 
     <ul>
-        <li>Acceso a Internet mediante redes Wi-Fi.</li>
-        <li>Comunicación entre teléfonos celulares.</li>
-        <li>Conexión de computadoras y dispositivos en una red.</li>
-        <li>Conexión de audífonos, teclados y bocinas mediante Bluetooth.</li>
-        <li>Comunicación entre edificios mediante enlaces de radio o microondas.</li>
-        <li>Sistemas de comunicación y monitoreo.</li>
-        <li>Transmisión de información en empresas e instituciones.</li>
+
+        <li>
+            Acceso a Internet mediante redes Wi-Fi.
+        </li>
+
+        <li>
+            Comunicación entre teléfonos celulares.
+        </li>
+
+        <li>
+            Conexión de computadoras y dispositivos en una red.
+        </li>
+
+        <li>
+            Conexión de audífonos, teclados y bocinas mediante Bluetooth.
+        </li>
+
+        <li>
+            Comunicación entre edificios mediante enlaces de radio o microondas.
+        </li>
+
+        <li>
+            Sistemas de comunicación y monitoreo.
+        </li>
+
+        <li>
+            Transmisión de información en empresas e instituciones.
+        </li>
+
     </ul>
 
 </section>
+
 
 <section id="seguridad">
 
@@ -609,12 +615,16 @@
     </p>
 
     <div class="destacado">
+
         <strong>🔒 Importante:</strong>
+
         Una red inalámbrica segura ayuda a proteger la información y los
         dispositivos conectados frente a accesos no autorizados.
+
     </div>
 
 </section>
+
 
 <section>
 
@@ -639,11 +649,20 @@
 
 </section>
 
+
 <footer>
 
-    <p><strong> PROYECTO: ENLACES INALÁMBRICOS</strong></p>
-    <p>Realizado por: Ever José Xiloj Rivas</p>
-    <p>Bachillerato en Computación</p>
+    <p>
+        <strong>PROYECTO: ENLACES INALÁMBRICOS</strong>
+    </p>
+
+    <p>
+        Realizado por: Ever José Xiloj Rivas
+    </p>
+
+    <p>
+        Bachillerato en Computación
+    </p>
 
 </footer>
 
