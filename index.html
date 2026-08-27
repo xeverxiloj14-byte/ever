@@ -1,670 +1,738 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Enlaces Inalámbricos</title>
 
     <style>
-        * {
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
 
+        /* =========================================
+           FONDO GENERAL
+           ========================================= */
         body {
+            background-color: lightblue;
+            font-family: Arial;
             margin: 0;
-            font-family: Arial, sans-serif;
-
-            /* COLOR PRINCIPAL */
-            background: #95b7e2;
-
-            color: #333;
-            line-height: 1.7;
+            text-align: center;
         }
 
+
+        /* =========================================
+           ENCABEZADO
+           ========================================= */
         header {
-            min-height: 300px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            padding: 40px 20px;
-
-            background: rgb(17, 42, 69);
+            background-color: #222;
+            padding: 40px;
         }
 
-        header h1 {
-            font-size: 45px;
-            margin: 0 0 10px;
 
-            /* COLOR DEL TITULO */
-            color: #548798;
+        /* TÍTULO PRINCIPAL */
+        .titulo-principal {
+            color: #483cb0;
+            font-size: 40px;
         }
 
-        header p {
-            font-size: 20px;
-            color: #fcfafa;
-            margin: 0;
+
+        /* TEXTO DEL ENCABEZADO */
+        .texto-encabezado {
+            color: white;
+            font-size: 18px;
         }
 
+
+        /* =========================================
+           MENÚ
+           ========================================= */
         nav {
-            background: rgb(249, 248, 248);
-            text-align: center;
-            padding: 15px 10px;
-
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-
-            border-bottom: 1px solid #90b8f9;
+            background-color: white;
+            padding: 20px;
         }
 
-        nav a {
-            display: inline-block;
 
-            color: #333;
+        /* CADA ENLACE DEL MENÚ */
+        .menu-introduccion {
+            color: #222;
+            font-size: 30px;
+            margin: 20px;
             text-decoration: none;
-
-            margin: 5px 8px;
-            padding: 8px 12px;
-
-            font-weight: bold;
         }
 
-        nav a:hover {
-            color: #1976d2;
+        .menu-funcionamiento {
+            color: #222;
+            font-size: 17px;
+            margin: 20px;
+            text-decoration: none;
         }
 
-        section {
-            width: 88%;
-            max-width: 1050px;
+        .menu-tipos {
+            color: #222;
+            font-size: 17px;
+            margin: 20px;
+            text-decoration: none;
+        }
 
-            margin: 30px auto;
-            padding: 30px;
+        .menu-ventajas {
+            color: #222;
+            font-size: 17px;
+            margin: 20px;
+            text-decoration: none;
+        }
 
-            background: white;
+        .menu-aplicaciones {
+            color: #222;
+            font-size: 17px;
+            margin: 20px;
+            text-decoration: none;
+        }
 
-            border: 1px solid #b3ddff;
+
+        /* =========================================
+           CAJA INTRODUCCIÓN
+           CAMBIA SOLO ESTA CAJA
+           ========================================= */
+        .caja-introduccion {
+            background-color: white;
+            margin: 25px auto;
+            padding: 25px;
+            width: 80%;
             border-radius: 10px;
         }
 
-        h2 {
-            /* COLOR DE LOS TITULOS */
-            color: #1976d2;
 
-            /* TAMAÑO DE LOS TITULOS */
+        /* TÍTULO INTRODUCCIÓN */
+        .titulo-introduccion {
+            color: #166ab4;
             font-size: 28px;
-
-            margin-top: 0;
         }
 
-        h3 {
-            color: #2196f3;
-            font-size: 21px;
+
+        /* PÁRRAFO INTRODUCCIÓN 1 */
+        .texto-introduccion-1 {
+            color: #160e0e;
+            font-size: 18px;
+            line-height: 1.6;
         }
 
-        p {
-            color: #444;
+
+        /* PÁRRAFO INTRODUCCIÓN 2 */
+        .texto-introduccion-2 {
+            color: #160e0e;
+            font-size: 18px;
+            line-height: 1.6;
         }
 
-        .destacado {
-            background: #e3f2fd;
 
-            border-left: 4px solid #2196f3;
-
-            padding: 18px;
-            margin: 20px 0;
-
-            border-radius: 5px;
+        /* =========================================
+           CAJA FUNCIONAMIENTO
+           ========================================= */
+        .caja-funcionamiento {
+            background-color: white;
+            margin: 25px auto;
+            padding: 25px;
+            width: 80%;
+            border-radius: 10px;
         }
 
-        ul {
-            padding-left: 25px;
+
+        /* TÍTULO FUNCIONAMIENTO */
+        .titulo-funcionamiento {
+            color: #166ab4;
+            font-size: 28px;
         }
 
-        li {
-            margin-bottom: 10px;
-            color: #333;
+
+        /* PÁRRAFO FUNCIONAMIENTO 1 */
+        .texto-funcionamiento-1 {
+            color: #160e0e;
+            font-size: 18px;
+            line-height: 1.6;
         }
 
-        li::marker {
-            color: #2196f3;
+
+        /* PÁRRAFO FUNCIONAMIENTO 2 */
+        .texto-funcionamiento-2 {
+            color: #160e0e;
+            font-size: 18px;
+            line-height: 1.6;
         }
 
-        /* ELEMENTOS SIN TARJETAS */
 
-        .elemento {
-            margin-bottom: 25px;
+        /* =========================================
+           CAJA TIPOS
+           ========================================= */
+        .caja-tipos {
+            background-color: white;
+            margin: 25px auto;
+            padding: 25px;
+            width: 80%;
+            border-radius: 10px;
         }
 
-        .elemento h3 {
-            margin-bottom: 5px;
+
+        /* TÍTULO TIPOS */
+        .titulo-tipos {
+            color: #166ab4;
+            font-size: 28px;
         }
 
-        /* TIPOS SIN TARJETAS */
 
-        .tipo {
-            margin-bottom: 25px;
+        /* TEXTO WI-FI */
+        .texto-wifi {
+            color: #160e0e;
+            font-size: 18px;
+            line-height: 1.6;
         }
 
-        .tipo h3 {
-            margin-bottom: 5px;
+
+        /* TEXTO BLUETOOTH */
+        .texto-bluetooth {
+            color: #160e0e;
+            font-size: 18px;
+            line-height: 1.6;
         }
 
-        /* VENTAJAS Y DESVENTAJAS */
 
-        .ventaja {
-            margin-bottom: 25px;
+        /* TEXTO REDES MÓVILES */
+        .texto-moviles {
+            color: #160e0e;
+            font-size: 18px;
+            line-height: 1.6;
         }
 
-        footer {
-            margin-top: 40px;
-            padding: 30px 20px;
 
-            text-align: center;
-
-            background: #1976d2;
+        /* TEXTO MICROONDAS */
+        .texto-microondas {
+            color: #160e0e;
+            font-size: 18px;
+            line-height: 1.6;
         }
 
-        footer p {
-            margin: 7px;
-            color: white;
+
+        /* PALABRAS EN NEGRITA DE TIPOS */
+        .negrita-wifi {
+            color: #166ab4;
+            font-size: 18px;
         }
 
-        footer strong {
-            color: white;
+        .negrita-bluetooth {
+            color: #166ab4;
+            font-size: 18px;
+        }
+
+        .negrita-moviles {
+            color: #166ab4;
+            font-size: 18px;
+        }
+
+        .negrita-microondas {
+            color: #166ab4;
+            font-size: 18px;
+        }
+
+
+        /* =========================================
+           CAJA VENTAJAS
+           ========================================= */
+        .caja-ventajas {
+            background-color: white;
+            margin: 25px auto;
+            padding: 25px;
+            width: 80%;
+            border-radius: 10px;
+        }
+
+
+        /* TÍTULO VENTAJAS */
+        .titulo-ventajas {
+            color: #166ab4;
+            font-size: 28px;
+        }
+
+
+        /* VENTAJA 1 */
+        .ventaja-1 {
+            color: #160e0e;
+            font-size: 18px;
+        }
+
+
+        /* VENTAJA 2 */
+        .ventaja-2 {
+            color: #160e0e;
+            font-size: 18px;
+        }
+
+
+        /* VENTAJA 3 */
+        .ventaja-3 {
+            color: #160e0e;
+            font-size: 18px;
+        }
+
+
+        /* VENTAJA 4 */
+        .ventaja-4 {
+            color: #160e0e;
+            font-size: 18px;
+        }
+
+
+        /* =========================================
+           CAJA APLICACIONES
+           ========================================= */
+        .caja-aplicaciones {
+            background-color: white;
+            margin: 25px auto;
+            padding: 25px;
+            width: 80%;
+            border-radius: 10px;
+        }
+
+
+        /* TÍTULO APLICACIONES */
+        .titulo-aplicaciones {
+            color: #166ab4;
+            font-size: 28px;
+        }
+
+
+        /* PÁRRAFO APLICACIONES 1 */
+        .texto-aplicaciones-1 {
+            color: #160e0e;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+
+        /* PÁRRAFO APLICACIONES 2 */
+        .texto-aplicaciones-2 {
+            color: #160e0e;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+
+        /* =========================================
+           CAJA HIPERVÍNCULO
+           ========================================= */
+        .caja-hipervinculo {
+            background-color: white;
+            margin: 25px auto;
+            padding: 25px;
+            width: 80%;
+            border-radius: 10px;
+        }
+
+
+        /* TÍTULO HIPERVÍNCULO */
+        .titulo-hipervinculo {
+            color: #166ab4;
+            font-size: 28px;
+        }
+
+
+        /* TEXTO HIPERVÍNCULO */
+        .texto-hipervinculo {
+            color: #160e0e;
+            font-size: 18px;
+        }
+
+
+        /* ENLACE */
+        .enlace-hipervinculo {
+            color: blue;
             font-size: 20px;
+            font-weight: bold;
         }
 
-        @media (max-width: 700px) {
 
-            header h1 {
-                font-size: 34px;
-            }
-
-            header p {
-                font-size: 17px;
-            }
-
-            section {
-                width: 94%;
-                padding: 22px;
-            }
-
-            nav a {
-                font-size: 14px;
-                padding: 7px 8px;
-            }
+        /* =========================================
+           CAJA TECNOLOGÍA
+           ========================================= */
+        .caja-tecnologia {
+            background-color: white;
+            margin: 25px auto;
+            padding: 25px;
+            width: 80%;
+            border-radius: 10px;
         }
+
+
+        /* TÍTULO TECNOLOGÍA */
+        .titulo-tecnologia {
+            color: #166ab4;
+            font-size: 28px;
+        }
+
+
+        /* TEXTO TECNOLOGÍA */
+        .texto-tecnologia {
+            color: #160e0e;
+            font-size: 18px;
+        }
+
+
+        /* IMAGEN */
+        .imagen-tecnologia {
+            width: 500px;
+            animation: mover 3s infinite alternate;
+        }
+
+
+        /* MOVIMIENTO DE LA IMAGEN */
+        @keyframes mover {
+
+            from {
+                transform: translateY(0px);
+            }
+
+            to {
+                transform: translateY(-20px);
+            }
+
+        }
+
+
+        /* =========================================
+           CAJA QR
+           ========================================= */
+        .caja-qr {
+            background-color: white;
+            margin: 25px auto;
+            padding: 25px;
+            width: 80%;
+            border-radius: 10px;
+        }
+
+
+        /* TÍTULO QR */
+        .titulo-qr {
+            color: #166ab4;
+            font-size: 28px;
+        }
+
+
+        /* TEXTO QR */
+        .texto-qr {
+            color: #160e0e;
+            font-size: 18px;
+        }
+
+
+        /* IMAGEN QR */
+        .imagen-qr {
+            width: 150px;
+        }
+
+
+        /* ENLACE WHATSAPP */
+        .enlace-whatsapp {
+            color: blue;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
     </style>
+
 </head>
+
 
 <body>
 
-<header>
 
-    <h1>ENLACES INALÁMBRICOS</h1>
+    <!-- =========================================
+         ENCABEZADO
+         ========================================= -->
 
-    <p>
-        Comunicación y transmisión de datos sin utilizar cables
-    </p>
+    <header>
 
-</header>
+        <h1 class="titulo-principal">
+            ENLACES INALÁMBRICOS
+        </h1>
 
+        <p class="texto-encabezado">
+            Comunicación y transmisión de datos sin utilizar cables
+        </p>
 
-<nav>
-
-    <a href="#introduccion">Introducción</a>
-    <a href="#funcionamiento">Funcionamiento</a>
-    <a href="#elementos">Elementos</a>
-    <a href="#tipos">Tipos</a>
-    <a href="#factores">Factores</a>
-    <a href="#ventajas">Ventajas</a>
-    <a href="#aplicaciones">Aplicaciones</a>
-    <a href="#seguridad">Seguridad</a>
-
-</nav>
+    </header>
 
 
-<section id="introduccion">
+    <!-- =========================================
+         MENÚ
+         ========================================= -->
 
-    <h2>¿Qué son los enlaces inalámbricos?</h2>
+    <nav>
 
-    
-        Los enlaces inalámbricos son sistemas de comunicación que permiten
-        transmitir información entre dos o más dispositivos sin utilizar
-        cables físicos. Para realizar esta transmisión se utilizan ondas
-        electromagnéticas, principalmente ondas de radio, microondas y,
-        en algunos casos, luz infrarroja.
-    
+        <a class="menu-introduccion" href="#introduccion">
+            Introducción
+        </a>
 
-    <p>
-        Este tipo de comunicación es utilizado actualmente en hogares,
-        empresas, instituciones educativas, industrias y sistemas de
-        telecomunicaciones. Tecnologías como Wi-Fi, Bluetooth y las redes
-        móviles utilizan diferentes formas de comunicación inalámbrica para
-        intercambiar información.
-    </p>
+        <a class="menu-funcionamiento" href="#funcionamiento">
+            Funcionamiento
+        </a>
 
-    <div class="destacado">
+        <a class="menu-tipos" href="#tipos">
+            Tipos
+        </a>
 
-        <strong>💡 Idea principal:</strong>
+        <a class="menu-ventajas" href="#ventajas">
+            Ventajas
+        </a>
 
-        Un enlace inalámbrico permite que la información viaje de un punto
-        a otro a través del aire, sin necesidad de utilizar un cable físico
-        como medio de transmisión.
+        <a class="menu-aplicaciones" href="#aplicaciones">
+            Aplicaciones
+        </a>
 
-    </div>
-
-</section>
+    </nav>
 
 
-<section id="funcionamiento">
+    <!-- =========================================
+         INTRODUCCIÓN
+         ========================================= -->
 
-    <h2>¿Cómo funcionan los enlaces inalámbricos?</h2>
+    <div class="caja-introduccion" id="introduccion">
 
-    <p>
-        Para establecer un enlace inalámbrico se necesita un dispositivo
-        que transmita la información y otro que pueda recibirla. El
-        transmisor convierte los datos en una señal electromagnética y
-        utiliza una antena para enviarla.
-    </p>
+        <h2 class="titulo-introduccion">
+            ¿Qué son los enlaces inalámbricos?
+        </h2>
 
-    <p>
-        La señal se propaga por el espacio hasta llegar al dispositivo
-        receptor. La antena receptora captura la señal y el equipo la
-        convierte nuevamente en información que puede ser utilizada por
-        una computadora, teléfono, router u otro dispositivo.
-    </p>
+        <p class="texto-introduccion-1">
 
-    <p>
-        La calidad de un enlace inalámbrico depende de diferentes factores,
-        como la distancia entre los dispositivos, la potencia de la señal,
-        los obstáculos físicos, las interferencias y las condiciones del
-        entorno.
-    </p>
+            Los enlaces inalámbricos son sistemas de comunicación
+            que permiten transmitir información entre dos o más
+            dispositivos sin utilizar cables físicos.
 
-</section>
+        </p>
 
+        <p class="texto-introduccion-2">
 
-<section id="elementos">
+            Utilizan ondas electromagnéticas para enviar y recibir
+            información a través del aire.
 
-    <h2>📡 Elementos de un enlace inalámbrico</h2>
-
-
-    <div class="elemento">
-
-        <h3>📤 Transmisor</h3>
-
-        <p>
-            Es el dispositivo que envía la información mediante una
-            señal inalámbrica.
         </p>
 
     </div>
 
 
-    <div class="elemento">
+    <!-- =========================================
+         FUNCIONAMIENTO
+         ========================================= -->
 
-        <h3>📥 Receptor</h3>
+    <div class="caja-funcionamiento" id="funcionamiento">
 
-        <p>
-            Es el dispositivo encargado de recibir la señal y convertirla
-            nuevamente en información.
+        <h2 class="titulo-funcionamiento">
+            ¿Cómo funcionan?
+        </h2>
+
+        <p class="texto-funcionamiento-1">
+
+            Un dispositivo transmite información mediante una señal
+            inalámbrica y otro dispositivo recibe esa señal.
+
+        </p>
+
+        <p class="texto-funcionamiento-2">
+
+            La información puede viajar mediante ondas de radio,
+            microondas o luz infrarroja.
+
         </p>
 
     </div>
 
 
-    <div class="elemento">
+    <!-- =========================================
+         TIPOS
+         ========================================= -->
 
-        <h3>📶 Antena</h3>
+    <div class="caja-tipos" id="tipos">
 
-        <p>
-            Permite transmitir y recibir ondas electromagnéticas.
-            Dependiendo del tipo de enlace puede tener diferentes formas
-            y características.
+        <h2 class="titulo-tipos">
+            Tipos de enlaces inalámbricos
+        </h2>
+
+        <p class="texto-wifi">
+
+            <b class="negrita-wifi">Wi-Fi:</b>
+            permite conectar dispositivos a Internet
+            y a redes locales.
+
+        </p>
+
+        <p class="texto-bluetooth">
+
+            <b class="negrita-bluetooth">Bluetooth:</b>
+            permite conectar dispositivos cercanos,
+            como celulares, computadoras y audífonos.
+
+        </p>
+
+        <p class="texto-moviles">
+
+            <b class="negrita-moviles">Redes móviles:</b>
+            permiten comunicarse y utilizar
+            Internet mediante teléfonos celulares.
+
+        </p>
+
+        <p class="texto-microondas">
+
+            <b class="negrita-microondas">Microondas:</b>
+            permiten transmitir información
+            a grandes distancias mediante antenas.
+
         </p>
 
     </div>
 
 
-    <div class="elemento">
+    <!-- =========================================
+         VENTAJAS
+         ========================================= -->
 
-        <h3>🌐 Medio de propagación</h3>
+    <div class="caja-ventajas" id="ventajas">
 
-        <p>
-            Es el espacio por donde viajan las ondas electromagnéticas
-            entre el transmisor y el receptor.
+        <h2 class="titulo-ventajas">
+            Ventajas
+        </h2>
+
+        <p class="ventaja-1">
+            • No necesitan cables.
         </p>
 
-    </div>
-
-</section>
-
-
-<section id="tipos">
-
-    <h2>📶 Tipos de enlaces inalámbricos</h2>
-
-
-    <div class="tipo">
-
-        <h3>📻 Radio</h3>
-
-        <p>
-            Utiliza ondas de radio para transmitir información. Es
-            ampliamente utilizado en comunicaciones de voz, datos y
-            televisión.
+        <p class="ventaja-2">
+            • Permiten movilidad.
         </p>
 
-    </div>
+        <p class="ventaja-3">
+            • Son fáciles de instalar.
+        </p>
 
-
-    <div class="tipo">
-
-        <h3>📡 Wi-Fi</h3>
-
-        <p>
-            Es una de las tecnologías inalámbricas más utilizadas.
-            Permite conectar computadoras, teléfonos, televisores y otros
-            dispositivos a una red local y, generalmente, a Internet.
+        <p class="ventaja-4">
+            • Permiten conectar varios dispositivos.
         </p>
 
     </div>
 
 
-    <div class="tipo">
+    <!-- =========================================
+         APLICACIONES
+         ========================================= -->
 
-        <h3>🔵 Bluetooth</h3>
+    <div class="caja-aplicaciones" id="aplicaciones">
 
-        <p>
-            Es una tecnología diseñada para comunicaciones inalámbricas
-            de corto alcance. Se utiliza para conectar teléfonos con
-            audífonos, bocinas, teclados, mouse y otros dispositivos.
+        <h2 class="titulo-aplicaciones">
+            ¿Dónde se utilizan?
+        </h2>
+
+        <p class="texto-aplicaciones-1">
+
+            Los enlaces inalámbricos se utilizan en hogares,
+            escuelas, empresas, hospitales, oficinas y lugares
+            públicos.
+
+        </p>
+
+        <p class="texto-aplicaciones-2">
+
+            Son importantes para acceder a Internet, compartir
+            información y conectar diferentes dispositivos.
+
         </p>
 
     </div>
 
 
-    <div class="tipo">
+    <!-- =========================================
+         HIPERVÍNCULO
+         ========================================= -->
 
-        <h3>📡 Microondas</h3>
+    <div class="caja-hipervinculo">
+
+        <h2 class="titulo-hipervinculo">
+            🔗 Hipervínculo
+        </h2>
+
+        <p class="texto-hipervinculo">
+
+            Haz clic en el siguiente enlace para obtener
+            más información:
+
+        </p>
+
+        <a class="enlace-hipervinculo"
+           href="https://es.wikipedia.org/wiki/Red_inal%C3%A1mbrica"
+           target="_blank">
+
+            Más información sobre enlaces inalámbricos
+
+        </a>
+
+    </div>
+
+
+    <!-- =========================================
+         TECNOLOGÍA INALÁMBRICA
+         ========================================= -->
+
+    <div class="caja-tecnologia">
+
+        <h2 class="titulo-tecnologia">
+            📡 Tecnología inalámbrica
+        </h2>
+
+        <p class="texto-tecnologia">
+
+            Ejemplo de tecnología utilizada en las comunicaciones
+            inalámbricas.
+
+        </p>
+
+        <img class="imagen-tecnologia"
+             src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=80"
+             alt="Tecnología inalámbrica">
+
+    </div>
+
+
+    <!-- =========================================
+         CÓDIGO QR
+         ========================================= -->
+
+    <div class="caja-qr">
+
+        <h2 class="titulo-qr">
+            📱 Código QR
+        </h2>
+
+        <p class="texto-qr">
+
+            Escanea este código para abrir WhatsApp:
+
+        </p>
+
+        <img class="imagen-qr"
+             src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/50248454615"
+             alt="Código QR de WhatsApp">
 
         <p>
-            Los enlaces de microondas permiten realizar comunicaciones
-            a distancias mayores mediante antenas. Son utilizados en
-            redes de telecomunicaciones y conexiones entre diferentes puntos.
+
+            <a class="enlace-whatsapp"
+               href="https://wa.me/50248454615"
+               target="_blank">
+
+                Abrir WhatsApp
+
+            </a>
+
         </p>
 
     </div>
 
-
-    <div class="tipo">
-
-        <h3>🔴 Infrarrojo</h3>
-
-        <p>
-            Utiliza radiación infrarroja para transmitir información.
-            Su utilización requiere normalmente una distancia corta y
-            puede verse afectada por obstáculos.
-        </p>
-
-    </div>
-
-
-    <div class="tipo">
-
-        <h3>📱 Redes móviles</h3>
-
-        <p>
-            Las redes celulares permiten que teléfonos y otros dispositivos
-            puedan comunicarse y acceder a Internet mediante estaciones
-            base distribuidas en diferentes zonas.
-        </p>
-
-    </div>
-
-</section>
-
-
-<section id="factores">
-
-    <h2>⚙️ Factores que afectan un enlace inalámbrico</h2>
-
-    <p>
-        Un enlace inalámbrico no siempre funciona de la misma manera.
-        La calidad y velocidad de la comunicación pueden verse afectadas
-        por diferentes factores.
-    </p>
-
-    <ul>
-
-        <li>
-            <strong>Distancia:</strong>
-            mientras mayor sea la distancia, la señal puede debilitarse.
-        </li>
-
-        <li>
-            <strong>Obstáculos:</strong>
-            paredes, edificios, árboles y otros objetos pueden afectar la señal.
-        </li>
-
-        <li>
-            <strong>Interferencias:</strong>
-            otros dispositivos y redes que utilizan frecuencias cercanas
-            pueden provocar interferencias.
-        </li>
-
-        <li>
-            <strong>Potencia:</strong>
-            la potencia de transmisión influye en el alcance del enlace.
-        </li>
-
-        <li>
-            <strong>Antenas:</strong>
-            el tipo, orientación y ubicación de las antenas pueden mejorar
-            o disminuir la calidad de la comunicación.
-        </li>
-
-        <li>
-            <strong>Condiciones ambientales:</strong>
-            en algunos enlaces de larga distancia, las condiciones
-            atmosféricas pueden influir en la propagación de la señal.
-        </li>
-
-    </ul>
-
-</section>
-
-
-<section id="ventajas">
-
-    <h2>⚡ Ventajas y desventajas</h2>
-
-
-    <div class="ventaja">
-
-        <h3>✅ Ventajas</h3>
-
-        <ul>
-
-            <li>
-                Permiten transmitir información sin utilizar cables.
-            </li>
-
-            <li>
-                Facilitan la movilidad de los dispositivos.
-            </li>
-
-            <li>
-                Son útiles donde instalar cables resulta difícil.
-            </li>
-
-            <li>
-                Permiten conectar varios dispositivos a una misma red.
-            </li>
-
-            <li>
-                Su instalación puede ser más sencilla que el cableado físico.
-            </li>
-
-            <li>
-                Permiten crear conexiones temporales o permanentes.
-            </li>
-
-        </ul>
-
-    </div>
-
-
-    <div class="ventaja">
-
-        <h3>⚠️ Desventajas</h3>
-
-        <ul>
-
-            <li>
-                La señal puede disminuir con la distancia.
-            </li>
-
-            <li>
-                Puede existir interferencia de otras señales.
-            </li>
-
-            <li>
-                Los obstáculos pueden afectar la comunicación.
-            </li>
-
-            <li>
-                Una red inalámbrica mal protegida puede presentar riesgos de seguridad.
-            </li>
-
-            <li>
-                La velocidad y estabilidad pueden variar dependiendo del entorno.
-            </li>
-
-        </ul>
-
-    </div>
-
-</section>
-
-
-<section id="aplicaciones">
-
-    <h2>🌐 Aplicaciones de los enlaces inalámbricos</h2>
-
-    <p>
-        Los enlaces inalámbricos están presentes en muchas actividades
-        cotidianas y profesionales. Algunos de sus principales usos son:
-    </p>
-
-    <ul>
-
-        <li>
-            Acceso a Internet mediante redes Wi-Fi.
-        </li>
-
-        <li>
-            Comunicación entre teléfonos celulares.
-        </li>
-
-        <li>
-            Conexión de computadoras y dispositivos en una red.
-        </li>
-
-        <li>
-            Conexión de audífonos, teclados y bocinas mediante Bluetooth.
-        </li>
-
-        <li>
-            Comunicación entre edificios mediante enlaces de radio o microondas.
-        </li>
-
-        <li>
-            Sistemas de comunicación y monitoreo.
-        </li>
-
-        <li>
-            Transmisión de información en empresas e instituciones.
-        </li>
-
-    </ul>
-
-</section>
-
-
-<section id="seguridad">
-
-    <h2>🔐 Seguridad en las redes inalámbricas</h2>
-
-    <p>
-        La seguridad es una parte importante de cualquier red inalámbrica.
-        Debido a que la información se transmite por medio de ondas de
-        radio, una red debe utilizar mecanismos de protección para evitar
-        accesos no autorizados.
-    </p>
-
-    <p>
-        Algunas medidas recomendadas son utilizar contraseñas seguras,
-        mantener actualizado el router, utilizar protocolos modernos de
-        seguridad y evitar compartir las credenciales de acceso con
-        personas desconocidas.
-    </p>
-
-    <div class="destacado">
-
-        <strong>🔒 Importante:</strong>
-
-        Una red inalámbrica segura ayuda a proteger la información y los
-        dispositivos conectados frente a accesos no autorizados.
-
-    </div>
-
-</section>
-
-
-<section>
-
-    <h2>🚀 Importancia de los enlaces inalámbricos</h2>
-
-    <p>
-        Los enlaces inalámbricos son fundamentales en la actualidad porque
-        permiten mantener conectados a millones de dispositivos sin depender
-        de conexiones físicas. Gracias a esta tecnología podemos acceder a
-        Internet desde diferentes lugares, comunicarnos mediante teléfonos
-        móviles y utilizar dispositivos que se conectan entre sí de manera
-        inalámbrica.
-    </p>
-
-    <p>
-        Además, estas tecnologías continúan evolucionando para ofrecer
-        mejores velocidades, mayor cobertura, menor latencia y conexiones
-        más seguras. Por esta razón, conocer cómo funcionan los enlaces
-        inalámbricos es importante para comprender una parte fundamental
-        de las telecomunicaciones modernas.
-    </p>
-
-</section>
-
-
-<footer>
-
-    <p>
-        <strong>PROYECTO: ENLACES INALÁMBRICOS</strong>
-    </p>
-
-    <p>
-        Realizado por: Ever José Xiloj Rivas
-    </p>
-
-    <p>
-        Bachillerato en Computación
-    </p>
-
-</footer>
 
 </body>
+
 </html>
