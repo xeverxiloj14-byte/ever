@@ -9,430 +9,137 @@
 
     <style>
 
-        /* =========================================
-           FONDO GENERAL
-           ========================================= */
+        /* FONDO */
         body {
-            background-color: lightblue;
+            background-color: rgb(178, 236, 255);
             font-family: Arial;
             margin: 0;
+        }
+
+
+        /* ENCABEZADO */
+        header {
+            background-color: #176B87;
+            padding: 30px;
             text-align: center;
         }
 
 
-        /* =========================================
-           ENCABEZADO
-           ========================================= */
-        header {
-            background-color: #222;
-            padding: 40px;
-        }
-
-
         /* TÍTULO PRINCIPAL */
-        .titulo-principal {
-            color: #483cb0;
+        .titulo {
+            color: rgb(16, 11, 11);
             font-size: 40px;
+            text-align: center;
         }
 
 
-        /* TEXTO DEL ENCABEZADO */
-        .texto-encabezado {
+        /* SUBTÍTULO */
+        .subtitulo {
             color: white;
             font-size: 18px;
+            text-align: center;
         }
 
 
-        /* =========================================
-           MENÚ
-           ========================================= */
+        /* MENÚ */
         nav {
             background-color: white;
             padding: 20px;
+            text-align: center;
         }
 
 
-        /* CADA ENLACE DEL MENÚ */
-        .menu-introduccion {
-            color: #222;
-            font-size: 30px;
-            margin: 20px;
-            text-decoration: none;
-        }
-
-        .menu-funcionamiento {
-            color: #222;
+        nav a {
+            color: #176B87;
             font-size: 17px;
-            margin: 20px;
-            text-decoration: none;
-        }
-
-        .menu-tipos {
-            color: #222;
-            font-size: 17px;
-            margin: 20px;
-            text-decoration: none;
-        }
-
-        .menu-ventajas {
-            color: #222;
-            font-size: 17px;
-            margin: 20px;
-            text-decoration: none;
-        }
-
-        .menu-aplicaciones {
-            color: #222;
-            font-size: 17px;
-            margin: 20px;
+            margin: 15px;
             text-decoration: none;
         }
 
 
-        /* =========================================
-           CAJA INTRODUCCIÓN
-           CAMBIA SOLO ESTA CAJA
-           ========================================= */
-        .caja-introduccion {
-            background-color: white;
-            margin: 25px auto;
-            padding: 25px;
+        /* SECCIONES */
+        section {
             width: 80%;
-            border-radius: 10px;
+            margin: 40px auto;
+            text-align: center;
         }
 
 
-        /* TÍTULO INTRODUCCIÓN */
-        .titulo-introduccion {
-            color: #166ab4;
+        /* TÍTULOS */
+        .introduccion {
+            color: #176B87;
             font-size: 28px;
+            text-align: center;
         }
 
-
-        /* PÁRRAFO INTRODUCCIÓN 1 */
-        .texto-introduccion-1 {
-            color: #160e0e;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-
-        /* PÁRRAFO INTRODUCCIÓN 2 */
-        .texto-introduccion-2 {
-            color: #160e0e;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-
-        /* =========================================
-           CAJA FUNCIONAMIENTO
-           ========================================= */
-        .caja-funcionamiento {
-            background-color: white;
-            margin: 25px auto;
-            padding: 25px;
-            width: 80%;
-            border-radius: 10px;
-        }
-
-
-        /* TÍTULO FUNCIONAMIENTO */
-        .titulo-funcionamiento {
-            color: #166ab4;
+        .funcionamiento {
+            color: #176B87;
             font-size: 28px;
+            text-align: center;
         }
 
-
-        /* PÁRRAFO FUNCIONAMIENTO 1 */
-        .texto-funcionamiento-1 {
-            color: #160e0e;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-
-        /* PÁRRAFO FUNCIONAMIENTO 2 */
-        .texto-funcionamiento-2 {
-            color: #160e0e;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-
-        /* =========================================
-           CAJA TIPOS
-           ========================================= */
-        .caja-tipos {
-            background-color: white;
-            margin: 25px auto;
-            padding: 25px;
-            width: 80%;
-            border-radius: 10px;
-        }
-
-
-        /* TÍTULO TIPOS */
-        .titulo-tipos {
-            color: #166ab4;
+        .tipos {
+            color: #176B87;
             font-size: 28px;
+            text-align: center;
         }
 
-
-        /* TEXTO WI-FI */
-        .texto-wifi {
-            color: #160e0e;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-
-        /* TEXTO BLUETOOTH */
-        .texto-bluetooth {
-            color: #160e0e;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-
-        /* TEXTO REDES MÓVILES */
-        .texto-moviles {
-            color: #160e0e;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-
-        /* TEXTO MICROONDAS */
-        .texto-microondas {
-            color: #160e0e;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-
-        /* PALABRAS EN NEGRITA DE TIPOS */
-        .negrita-wifi {
-            color: #166ab4;
-            font-size: 18px;
-        }
-
-        .negrita-bluetooth {
-            color: #166ab4;
-            font-size: 18px;
-        }
-
-        .negrita-moviles {
-            color: #166ab4;
-            font-size: 18px;
-        }
-
-        .negrita-microondas {
-            color: #166ab4;
-            font-size: 18px;
-        }
-
-
-        /* =========================================
-           CAJA VENTAJAS
-           ========================================= */
-        .caja-ventajas {
-            background-color: white;
-            margin: 25px auto;
-            padding: 25px;
-            width: 80%;
-            border-radius: 10px;
-        }
-
-
-        /* TÍTULO VENTAJAS */
-        .titulo-ventajas {
-            color: #166ab4;
+        .ventajas {
+            color: #176B87;
             font-size: 28px;
+            text-align: center;
         }
 
-
-        /* VENTAJA 1 */
-        .ventaja-1 {
-            color: #160e0e;
-            font-size: 18px;
-        }
-
-
-        /* VENTAJA 2 */
-        .ventaja-2 {
-            color: #160e0e;
-            font-size: 18px;
-        }
-
-
-        /* VENTAJA 3 */
-        .ventaja-3 {
-            color: #160e0e;
-            font-size: 18px;
-        }
-
-
-        /* VENTAJA 4 */
-        .ventaja-4 {
-            color: #160e0e;
-            font-size: 18px;
-        }
-
-
-        /* =========================================
-           CAJA APLICACIONES
-           ========================================= */
-        .caja-aplicaciones {
-            background-color: white;
-            margin: 25px auto;
-            padding: 25px;
-            width: 80%;
-            border-radius: 10px;
-        }
-
-
-        /* TÍTULO APLICACIONES */
-        .titulo-aplicaciones {
-            color: #166ab4;
+        .aplicaciones {
+            color: #176B87;
             font-size: 28px;
+            text-align: center;
+        }
+
+        .hipervinculo {
+            color: #176B87;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .tecnologia {
+            color: #176B87;
+            font-size: 28px;
+            text-align: center;
+        }
+
+        .qr-titulo {
+            color: #176B87;
+            font-size: 28px;
+            text-align: center;
         }
 
 
-        /* PÁRRAFO APLICACIONES 1 */
-        .texto-aplicaciones-1 {
-            color: #160e0e;
+        /* PÁRRAFOS */
+        .texto {
+            color: black;
             font-size: 18px;
+            text-align: center;
             line-height: 1.6;
         }
 
 
-        /* PÁRRAFO APLICACIONES 2 */
-        .texto-aplicaciones-2 {
-            color: #160e0e;
-            font-size: 18px;
-            line-height: 1.6;
-        }
-
-
-        /* =========================================
-           CAJA HIPERVÍNCULO
-           ========================================= */
-        .caja-hipervinculo {
-            background-color: white;
-            margin: 25px auto;
-            padding: 25px;
-            width: 80%;
-            border-radius: 10px;
-        }
-
-
-        /* TÍTULO HIPERVÍNCULO */
-        .titulo-hipervinculo {
-            color: #166ab4;
-            font-size: 28px;
-        }
-
-
-        /* TEXTO HIPERVÍNCULO */
-        .texto-hipervinculo {
-            color: #160e0e;
-            font-size: 18px;
-        }
-
-
-        /* ENLACE */
-        .enlace-hipervinculo {
-            color: blue;
+        /* ENLACES */
+        .enlace {
+            color: #176B87;
             font-size: 20px;
-            font-weight: bold;
-        }
-
-
-        /* =========================================
-           CAJA TECNOLOGÍA
-           ========================================= */
-        .caja-tecnologia {
-            background-color: white;
-            margin: 25px auto;
-            padding: 25px;
-            width: 80%;
-            border-radius: 10px;
-        }
-
-
-        /* TÍTULO TECNOLOGÍA */
-        .titulo-tecnologia {
-            color: #166ab4;
-            font-size: 28px;
-        }
-
-
-        /* TEXTO TECNOLOGÍA */
-        .texto-tecnologia {
-            color: #160e0e;
-            font-size: 18px;
         }
 
 
         /* IMAGEN */
-        .imagen-tecnologia {
-            width: 500px;
-            animation: mover 3s infinite alternate;
+        .imagen {
+            width: 499px;
         }
 
 
-        /* MOVIMIENTO DE LA IMAGEN */
-        @keyframes mover {
-
-            from {
-                transform: translateY(0px);
-            }
-
-            to {
-                transform: translateY(-20px);
-            }
-
-        }
-
-
-        /* =========================================
-           CAJA QR
-           ========================================= */
-        .caja-qr {
-            background-color: white;
-            margin: 25px auto;
-            padding: 25px;
-            width: 80%;
-            border-radius: 10px;
-        }
-
-
-        /* TÍTULO QR */
-        .titulo-qr {
-            color: #166ab4;
-            font-size: 28px;
-        }
-
-
-        /* TEXTO QR */
-        .texto-qr {
-            color: #160e0e;
-            font-size: 18px;
-        }
-
-
-        /* IMAGEN QR */
-        .imagen-qr {
+        /* CÓDIGO QR */
+        .qr {
             width: 150px;
-        }
-
-
-        /* ENLACE WHATSAPP */
-        .enlace-whatsapp {
-            color: blue;
-            font-size: 20px;
-            font-weight: bold;
         }
 
     </style>
@@ -443,227 +150,176 @@
 <body>
 
 
-    <!-- =========================================
-         ENCABEZADO
-         ========================================= -->
+    <!-- ENCABEZADO -->
 
     <header>
 
-        <h1 class="titulo-principal">
-            ENLACES INALÁMBRICOS
+        <h1 class="titulo">
+           <b> ENLACES INALÁMBRICOS</b>
         </h1>
 
-        <p class="texto-encabezado">
+        <p class="subtitulo">
             Comunicación y transmisión de datos sin utilizar cables
         </p>
 
     </header>
 
 
-    <!-- =========================================
-         MENÚ
-         ========================================= -->
+    <!-- MENÚ -->
 
     <nav>
 
-        <a class="menu-introduccion" href="#introduccion">
-            Introducción
-        </a>
+        <a href="#introduccion">Introducción</a>
 
-        <a class="menu-funcionamiento" href="#funcionamiento">
-            Funcionamiento
-        </a>
+        <a href="#funcionamiento">Funcionamiento</a>
 
-        <a class="menu-tipos" href="#tipos">
-            Tipos
-        </a>
+        <a href="#tipos">Tipos</a>
 
-        <a class="menu-ventajas" href="#ventajas">
-            Ventajas
-        </a>
+        <a href="#ventajas">Ventajas</a>
 
-        <a class="menu-aplicaciones" href="#aplicaciones">
-            Aplicaciones
-        </a>
+        <a href="#aplicaciones">Aplicaciones</a>
 
     </nav>
 
 
-    <!-- =========================================
-         INTRODUCCIÓN
-         ========================================= -->
+    <!-- INTRODUCCIÓN -->
 
-    <div class="caja-introduccion" id="introduccion">
+    <section id="introduccion">
 
-        <h2 class="titulo-introduccion">
+        <h2 class="introduccion">
             ¿Qué son los enlaces inalámbricos?
         </h2>
 
-        <p class="texto-introduccion-1">
-
+        <p class="texto">
             Los enlaces inalámbricos son sistemas de comunicación
             que permiten transmitir información entre dos o más
             dispositivos sin utilizar cables físicos.
-
         </p>
 
-        <p class="texto-introduccion-2">
-
+        <p class="texto">
             Utilizan ondas electromagnéticas para enviar y recibir
             información a través del aire.
-
         </p>
 
-    </div>
+    </section>
 
 
-    <!-- =========================================
-         FUNCIONAMIENTO
-         ========================================= -->
+    <!-- FUNCIONAMIENTO -->
 
-    <div class="caja-funcionamiento" id="funcionamiento">
+    <section id="funcionamiento">
 
-        <h2 class="titulo-funcionamiento">
+        <h2 class="funcionamiento">
             ¿Cómo funcionan?
         </h2>
 
-        <p class="texto-funcionamiento-1">
-
+        <p class="texto">
             Un dispositivo transmite información mediante una señal
             inalámbrica y otro dispositivo recibe esa señal.
-
         </p>
 
-        <p class="texto-funcionamiento-2">
-
+        <p class="texto">
             La información puede viajar mediante ondas de radio,
             microondas o luz infrarroja.
-
         </p>
 
-    </div>
+    </section>
 
 
-    <!-- =========================================
-         TIPOS
-         ========================================= -->
+    <!-- TIPOS -->
 
-    <div class="caja-tipos" id="tipos">
+    <section id="tipos">
 
-        <h2 class="titulo-tipos">
+        <h2 class="tipos">
             Tipos de enlaces inalámbricos
         </h2>
 
-        <p class="texto-wifi">
-
-            <b class="negrita-wifi">Wi-Fi:</b>
-            permite conectar dispositivos a Internet
-            y a redes locales.
-
+        <p class="texto">
+            <b>Wi-Fi:</b>
+            permite conectar dispositivos a Internet y a redes locales.
         </p>
 
-        <p class="texto-bluetooth">
-
-            <b class="negrita-bluetooth">Bluetooth:</b>
+        <p class="texto">
+            <b>Bluetooth:</b>
             permite conectar dispositivos cercanos,
             como celulares, computadoras y audífonos.
-
         </p>
 
-        <p class="texto-moviles">
-
-            <b class="negrita-moviles">Redes móviles:</b>
-            permiten comunicarse y utilizar
-            Internet mediante teléfonos celulares.
-
+        <p class="texto">
+            <b>Redes móviles:</b>
+            permiten comunicarse y utilizar Internet
+            mediante teléfonos celulares.
         </p>
 
-        <p class="texto-microondas">
-
-            <b class="negrita-microondas">Microondas:</b>
-            permiten transmitir información
-            a grandes distancias mediante antenas.
-
+        <p class="texto">
+            <b>Microondas:</b>
+            permiten transmitir información a grandes distancias
+            mediante antenas.
         </p>
 
-    </div>
+    </section>
 
 
-    <!-- =========================================
-         VENTAJAS
-         ========================================= -->
+    <!-- VENTAJAS -->
 
-    <div class="caja-ventajas" id="ventajas">
+    <section id="ventajas">
 
-        <h2 class="titulo-ventajas">
+        <h2 class="ventajas">
             Ventajas
         </h2>
 
-        <p class="ventaja-1">
+        <p class="texto">
             • No necesitan cables.
         </p>
 
-        <p class="ventaja-2">
+        <p class="texto">
             • Permiten movilidad.
         </p>
 
-        <p class="ventaja-3">
+        <p class="texto">
             • Son fáciles de instalar.
         </p>
 
-        <p class="ventaja-4">
+        <p class="texto">
             • Permiten conectar varios dispositivos.
         </p>
 
-    </div>
+    </section>
 
 
-    <!-- =========================================
-         APLICACIONES
-         ========================================= -->
+    <!-- APLICACIONES -->
 
-    <div class="caja-aplicaciones" id="aplicaciones">
+    <section id="aplicaciones">
 
-        <h2 class="titulo-aplicaciones">
+        <h2 class="aplicaciones">
             ¿Dónde se utilizan?
         </h2>
 
-        <p class="texto-aplicaciones-1">
-
+        <p class="texto">
             Los enlaces inalámbricos se utilizan en hogares,
-            escuelas, empresas, hospitales, oficinas y lugares
-            públicos.
-
+            escuelas, empresas, hospitales, oficinas y lugares públicos.
         </p>
 
-        <p class="texto-aplicaciones-2">
-
+        <p class="texto">
             Son importantes para acceder a Internet, compartir
             información y conectar diferentes dispositivos.
-
         </p>
 
-    </div>
+    </section>
 
 
-    <!-- =========================================
-         HIPERVÍNCULO
-         ========================================= -->
+    <!-- HIPERVÍNCULO -->
 
-    <div class="caja-hipervinculo">
+    <section>
 
-        <h2 class="titulo-hipervinculo">
+        <h2 class="hipervinculo">
             🔗 Hipervínculo
         </h2>
 
-        <p class="texto-hipervinculo">
-
-            Haz clic en el siguiente enlace para obtener
-            más información:
-
+        <p class="texto">
+            Haz clic en el siguiente enlace para obtener más información:
         </p>
 
-        <a class="enlace-hipervinculo"
+        <a class="enlace"
            href="https://es.wikipedia.org/wiki/Red_inal%C3%A1mbrica"
            target="_blank">
 
@@ -671,56 +327,68 @@
 
         </a>
 
-    </div>
+    </section>
 
 
-    <!-- =========================================
-         TECNOLOGÍA INALÁMBRICA
-         ========================================= -->
+    <!-- TECNOLOGÍA -->
 
-    <div class="caja-tecnologia">
+    <section>
 
-        <h2 class="titulo-tecnologia">
+        <h2 class="tecnologia">
             📡 Tecnología inalámbrica
         </h2>
 
-        <p class="texto-tecnologia">
-
+        <p class="texto">
             Ejemplo de tecnología utilizada en las comunicaciones
             inalámbricas.
-
         </p>
 
-        <img class="imagen-tecnologia"
-             src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=80"
-             alt="Tecnología inalámbrica">
+       <style>
+.imagen {
+    width: 500px;
+    animation: mover 2s infinite;
+}
 
-    </div>
+@keyframes mover {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+</style>
+
+<img class="imagen"
+     src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=500&q=80"
+     alt="Tecnología inalámbrica">
+    </section>
 
 
-    <!-- =========================================
-         CÓDIGO QR
-         ========================================= -->
+    <!-- CÓDIGO QR -->
 
-    <div class="caja-qr">
+    <section>
 
-        <h2 class="titulo-qr">
+        <h2 class="qr-titulo">
             📱 Código QR
         </h2>
 
-        <p class="texto-qr">
-
-            Escanea este código para abrir WhatsApp:
-
+        <p class="texto">
+            Escanea este código para poder chataer en whatsapp
         </p>
 
-        <img class="imagen-qr"
+        <img class="qr"
              src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://wa.me/50248454615"
-             alt="Código QR de WhatsApp">
+             alt="Código QR">
 
         <p>
 
-            <a class="enlace-whatsapp"
+            <a class="enlace"
                href="https://wa.me/50248454615"
                target="_blank">
 
@@ -730,7 +398,7 @@
 
         </p>
 
-    </div>
+    </section>
 
 
 </body>
